@@ -9,6 +9,11 @@ df <- read.csv('csv/townssurvey_polym.csv')
 
 reactable(
 	df,
+	defaultSorted = c("town"),
+	sortable = TRUE,	# accessibility issue?
+	filterable = TRUE,	# accessibility issue?
+	# searchable = TRUE,
+	defaultPageSize = 5,
 	columns = list(
 		town = colDef(name = 'Town'),
 		town_id = colDef(name = 'Town ID'),
