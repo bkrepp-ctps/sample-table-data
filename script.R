@@ -25,9 +25,9 @@ reactable(
 		style = list(fontFamily = "Trebuchet MS, sans-serif")
 	),
 	columns = list(
-		town = colDef(name = 'Town'),
+		town = colDef(name = 'Town', width = 170),
 		town_id = colDef(name = 'Town ID'),
-		type = colDef(name = 'Municipality Type'),
+		type = colDef(name = 'Type', style = list(textAlign = "center")),
 		sum_square_miles = colDef('Area (Sq Mi)'),
 		sum_acres = colDef('Area (Acres)'),
 		pop1980 = colDef(name = 'Population 1980'),
@@ -37,6 +37,6 @@ reactable(
 		popch80_90 = colDef(name = 'Population Change 1980 1990'),
 		popch90_00 = colDef(name = 'Population Change 1990 2000'),
 		popch00_10 = colDef(name = 'Population Change 2000 2010'),
-		fips_stco = colDef(name = 'FIPS Code'),
-		fourcolor = colDef(name = '4-color Code'))
+		fips_stco = colDef(name = 'FIPS Code', style = list(textAlign = "center")),
+		fourcolor = colDef(name = '4-color Code', style = list(textAlign = "center")))
 	)
