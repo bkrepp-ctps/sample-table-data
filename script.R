@@ -9,11 +9,21 @@ df <- read.csv('csv/townssurvey_polym.csv')
 
 reactable(
 	df,
+	sortable = TRUE,		# accessibility issue?
 	defaultSorted = c("town"),
-	sortable = TRUE,	# accessibility issue?
-	filterable = TRUE,	# accessibility issue?
-	# searchable = TRUE,
-	defaultPageSize = 5,
+	# filterable = TRUE,	# accessibility issue?
+	# searchable = TRUE,	# accessibility issue?
+	defaultPageSize = 20,
+	outlined = TRUE,
+	striped = TRUE,
+	highlight = TRUE,
+	resizable = TRUE,
+	theme = reactableTheme(
+		borderColor = "#dfe2e5",
+		stripedColor = "#f6f8fa",
+		highlightColor = "#f0f5f9",
+		style = list(fontFamily = "Trebuchet MS, sans-serif")
+	),
 	columns = list(
 		town = colDef(name = 'Town'),
 		town_id = colDef(name = 'Town ID'),
